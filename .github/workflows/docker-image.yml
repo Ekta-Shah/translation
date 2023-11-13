@@ -21,7 +21,7 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ektashah30/t5-translation:${{github.sha}}
+      run: docker build . --file Dockerfile --tag ektashah30/translate:${{github.sha}}
       
     - name: Docker Push
-      run: docker push ektashah30/t5-translation:${{github.sha}}
+      run: docker push ektashah30/translate:${{github.sha}}
